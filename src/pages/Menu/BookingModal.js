@@ -54,16 +54,16 @@ const BookingModal = ({
     setLoading(false);
   };
 
-  if (
-    loading ||
-    uLoading ||
-    !modalData ||
-    !index ||
-    !totalAmount ||
-    !addingCart
-  ) {
-    return <Loading></Loading>;
-  }
+  // if (
+  //   loading ||
+  //   uLoading ||
+  //   !modalData ||
+  //   !index ||
+  //   !totalAmount ||
+  //   !addingCart
+  // ) {
+  //   return <Loading></Loading>;
+  // }
   return (
     <div>
       <input type="checkbox" id="bookingModal" className="modal-toggle" />
