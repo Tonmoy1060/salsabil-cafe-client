@@ -3,7 +3,7 @@ import bottomBanner from "../../../assets/banners/bottomBanner.jpg";
 
 const NewsLetters = () => {
   return (
-    <div className="m-7 rounded-lg py-3 pb-8">
+    <div className="lg:m-7 md:m-7 rounded-lg py-3 pb-10">
       <div
         className="hero rounded-lg"
         style={{ backgroundImage: `url(${bottomBanner})` }}
@@ -14,7 +14,7 @@ const NewsLetters = () => {
             <div className="text-center text-neutral-content mb-14">
               <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-primary"></div>
               <h4 className="text-md tracking-wide font-bold ">NEWSLETTER</h4>
-              <h1 className="font-bold text-6xl my-5 font-serif ">
+              <h1 className="font-bold lg:text-6xl md:text-5xl text-3xl my-5 font-serif ">
               Subscribe our newsletter
               </h1>
               <p className="text-xs">
@@ -24,7 +24,7 @@ const NewsLetters = () => {
             </div>
             <form className="py-5 my-3">
             <input type="text" placeholder="Enter Your Email Here" className="input w-full max-w-xs" />
-            <button className="btn btn-primary ml-5 text-white"> subscribe</button>
+            <button className="btn btn-primary ml-5 text-white lg:mt-0 mt-3"> subscribe</button>
             </form>
           </div>
         </div>

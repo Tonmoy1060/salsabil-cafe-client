@@ -17,7 +17,7 @@ const WorkingHour = () => {
                   <div className="w-9 rounded-lg mr-4 h-1 bg-primary"></div>
                   <h1 className=" tracking-wide font-mono">ABOUT US</h1>
                 </div>
-                <h1 className="text-5xl font-bold font-serif ">Working hours</h1>
+                <h1 className="lg:text-5xl text-4xl font-bold font-serif ">Working hours</h1>
                 <p className="py-6">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi.

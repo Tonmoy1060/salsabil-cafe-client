@@ -1,0 +1,178 @@
+[
+   {
+      "_id": 1,
+      "name": "Extra Mini Soft Drinks",
+      "category": "Cold Drinks",
+      "quantity": "250ml",
+      "img": "https://img.freepik.com/free-photo/fresh-drink-with-green-lime_144627-12397.jpg?w=740&t=st=1667296386~exp=1667296986~hmac=25f162df7136334b77a4ba20167313037affbaff4d2f996b07563d9ceae869fc",
+      "price": 35,
+      "piece":1,
+      "newPrice": 35,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 2,
+      "name": "Mini Soft Drinks",
+      "category": "Cold Drinks",
+      "quantity": "500ml",
+      "img": "https://img.freepik.com/free-photo/mojito-cocktail-glass-with-ice-pieces-fresh-mint-leaves-lime-slices-with-tube_114579-1447.jpg?w=740&t=st=1667296472~exp=1667297072~hmac=536ad60f6da6055930a380e504f3dae7ff45c779230daf5c4c2ad9f8b82ba721",
+      "price": 90,
+      "newPrice": 90,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 3,
+      "name": "Soft Drinks",
+      "category": "Cold Drinks",
+      "quantity": "1L",
+      "img": "https://img.freepik.com/premium-photo/mojito-cubano-iced-drink-with-lime-mint_159285-347.jpg?w=900",
+      "price": 120,
+      "newPrice": 120,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 4,
+      "name": "Large Soft Drinks",
+      "category": "Cold Drinks",
+      "quantity": "2L",
+      "img": "https://img.freepik.com/free-photo/invigorating-front-view-lemonade-decanter-with-lemon-lime-orange-tarragon_141793-4727.jpg?t=st=1667296633~exp=1667297233~hmac=0dd3439f70327d5082f6bf1bf1790d7238293aef231a16786cccefa5076b39a9",
+      "price": 200,
+      "newPrice": 200,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 5,
+      "name": "Flavour Tea",
+      "category": "Hot & Confectionary Drinks",
+      "quantity": "1 cup",
+      "img": "https://img.freepik.com/free-photo/brown-splashes-out-drink-from-cup-tea-brown-wall_155003-2058.jpg?w=900&t=st=1667297169~exp=1667297769~hmac=d3d2be6144444fa1868bcc38b2f3433c9770fc1ee30dba4397c4f63c26ee0c79",
+      "price": 10,
+      "newPrice": 10,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 6,
+      "name": "Black Coffee",
+      "category": "Hot & Confectionary Drinks",
+      "quantity": "1 cup",
+      "img": "https://img.freepik.com/free-photo/side-view-white-cup-black-coffe-coffee-beans-coffee-cream-moving-cup_633478-1767.jpg?w=1060&t=st=1667297281~exp=1667297881~hmac=81efe5d5b22848e23ba0a095f7f3ff334b28f62d30fada847115dd4fa9b0bfb9",
+      "price": 35,
+      "newPrice": 35,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 7,
+      "name": "Cold Coffee",
+      "category": "Hot & Confectionary Drinks",
+      "quantity": "1 cup",
+      "img": "https://img.freepik.com/premium-photo/pouring-topping-onto-dessert-with-cold-brew-coffee-glass-wooden-tray_495423-25052.jpg?w=360",
+      "price": 45,
+      "newPrice": 45,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 8,
+      "name": "Lassi",
+      "category": "Hot & Confectionary Drinks",
+      "quantity": "1 cup",
+      "img": "https://img.freepik.com/free-photo/ayran-drink-with-mint-cucumber-glass-wooden-table_123827-21425.jpg?w=900&t=st=1667297466~exp=1667298066~hmac=fc64fc4e3bd1999fd414558044691a4cfd90030cd1e0c0da94e08e7b454f3c2e",
+      "price": 90,
+      "newPrice": 90,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 9,
+      "name": "Burger",
+      "category": "Fast Food",
+      "quantity": "1 plate",
+      "img": "https://img.freepik.com/free-photo/front-view-tasty-meat-burger-with-cheese-salad-dark-background_140725-89597.jpg?w=900&t=st=1667298878~exp=1667299478~hmac=af80e3409433c7919fc9b359c5d5370d80759829abca5cb49626d08df6d47261",
+      "price": 45,
+      "newPrice": 45,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 10,
+      "name": "Potato Wage",
+      "category": "Fast Food",
+      "quantity": "1 plate",
+      "img": "https://img.freepik.com/premium-photo/tasty-freshly-made-wage-potato-chips-sauce-table_260672-5085.jpg?w=900",
+      "price": 45,
+      "newPrice": 45,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 11,
+      "name": "Chicken Fry",
+      "category": "Fast Food",
+      "quantity": "1 plate",
+      "img": "https://img.freepik.com/free-photo/crispy-fried-chicken-plate-with-salad-carrot_1150-20212.jpg?w=900&t=st=1667299122~exp=1667299722~hmac=6da606a5d5f59b8535c48895b449175d6df83854c077d2119eddca2c9addea51",
+      "price": 45,
+      "newPrice": 45,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 12,
+      "name": "Doi Fuska",
+      "category": "Fast Food",
+      "quantity": "1 plate",
+      "img": "https://img.freepik.com/free-photo/dahi-puri-chat-is-indian-road-side-snack-item-which-is-especially-popular-state-maharashtra-india_466689-73908.jpg?w=900&t=st=1667299268~exp=1667299868~hmac=a751c01a3a12efa79cdc7ff4ce7452950c50751ef439b9cb1823604722c57a39",
+      "price": 90,
+      "newPrice": 90,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 13,
+      "name": "Ice Cream",
+      "category": "Confectionary",
+      "quantity": "1 piece",
+      "img": "https://img.freepik.com/free-photo/ice-cream-cone-stand_169016-6345.jpg?w=1060&t=st=1667299386~exp=1667299986~hmac=c761b74ebdb487dadc7280bf9f7d29f02419c0ff3d8c4039e618d8f2a4c9afa1",
+      "price": 55,
+      "newPrice": 55,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 14,
+      "name": "Cake",
+      "category": "Confectionary",
+      "quantity": "1 pound",
+      "img": "https://img.freepik.com/free-photo/front-view-sweet-chocolate-cake_23-2148834059.jpg?w=1060&t=st=1667299437~exp=1667300037~hmac=534956a735304b28014effa1ac5fab48e8830f5150ce6b5fe681630f2a3113ba",
+      "price": 55,
+      "newPrice": 55,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 15,
+      "name": "Chocolate",
+      "category": "Confectionary",
+      "quantity": "1 piece",
+      "img": "https://img.freepik.com/premium-psd/dark-chocolate-bars-isolated_88281-5566.jpg?w=826",
+      "price": 95,
+      "newPrice": 95,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   },
+   {
+      "_id": 16,
+      "name": "Vanilla",
+      "category": "Confectionary",
+      "quantity": "1 piece",
+      "img": "https://img.freepik.com/premium-photo/closeup-shot-ice-cream-scoop-s-with-caramel-sauce-isolated-black-background_665346-4790.jpg?w=1060",
+      "price": 95,
+      "newPrice": 95,
+      "piece":1,
+      "description": "This is about all type of cold soft drinks. various type of drinks we have and also have different type of quantity."
+   }
+]

@@ -9,7 +9,7 @@ const Features = () => {
       <div className="text-center ">
         <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-primary"></div>
         <h4 className="text-lg tracking-wide font-bold ">FEATURES</h4>
-        <h1 className="font-bold text-5xl my-4 font-serif ">
+        <h1 className="font-bold lg:text-5xl text-4xl my-4 font-serif ">
           Why people choose us?
         </h1>
         <p className="text-xs">

@@ -52,31 +52,34 @@ const Header = () => {
               <li>
                 <Link to={"contact"}>Contact</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link className="btn btn-lg btn-primary text-white">
                   Reservation
                 </Link>
-              </li>
+              </li> */}
+              {user && (
+                <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                  <Link to="dashboard">Dashboard</Link>
+                </li>
+              )}
+
               {user ? (
-                <li>
-                  <Link onClick={handleSignOut} to="/login">
+                <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                  <Link onClick={handleSignOut} to="login">
                     Sign Out
                   </Link>
                 </li>
               ) : (
-                <li>
-                  <Link to="/login">Login</Link>
+                <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                  <Link to={"login"}>
+                    <FaSignInAlt className="text-2xl text-secondary " />
+                  </Link>
                 </li>
               )}
-              <li>
-                <Link to={"login"}>
-                  <FaSignInAlt className="text-2xl text-secondary" />
-                </Link>
-              </li>
             </ul>
           </div>
           <div className=" lg:mx-7 mx-3 flex items-center">
-            <SiCoffeescript className="text-5xl text-accent mr-1 " />
+            <SiCoffeescript className="lg:text-5xl text-4xl text-accent mr-1 " />
 
             <div className="justify-center">
               <Link className="normal-case text-2xl font-bold pb-0 mb-0 font-serif  ">
@@ -99,7 +102,7 @@ const Header = () => {
             </li>
 
             <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
-              <Link to={"menu"}>Menu</Link>
+              <Link to={"menu/"}>Menu</Link>
             </li>
             <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
               <Link to={"about"}>About</Link>
@@ -108,11 +111,19 @@ const Header = () => {
             <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
               <Link to={"contact"}>Contact</Link>
             </li>
-            <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+            {/* <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
               <Link className="btn btn-lg btn-primary text-white">
                 Reservation
               </Link>
-            </li>
+            
+            </li> */}
+
+            {user && (
+              <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                <Link to="dashboard">Dashboard</Link>
+              </li>
+            )}
+
             {user ? (
               <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
                 <Link onClick={handleSignOut} to="login">
