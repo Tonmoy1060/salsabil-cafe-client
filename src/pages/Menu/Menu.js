@@ -21,7 +21,7 @@ const Menu = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/items/${categoryRoute}`)
+    fetch(`https://salsabil-cafe.onrender.com/items/${categoryRoute}`)
       .then((res) => res.json())
       .then((data) => {
         setAllItems(data);

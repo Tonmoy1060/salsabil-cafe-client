@@ -31,7 +31,7 @@ const BookingModal = ({
       amount: totalAmount,
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://salsabil-cafe.onrender.com/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
