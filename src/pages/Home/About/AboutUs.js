@@ -6,8 +6,8 @@ const AboutUs = () => {
   return (
     <div className="">
       <div className="hero lg:py-10 py-3 mt-4">
-        <div className="hero-content flex-col lg:flex-row ">
-          <img src={coffee} className="lg:max-w-xl md:max-w-lg xs:max-w-xs sm:max-w-md rounded-lg shadow-2xl" />
+        <div className="hero-content  flex-col lg:flex-row ">
+          <img src={coffee} className="lg:max-w-xl md:max-w-lg xs:max-w-xs sm:max-w-md  rounded-lg shadow-2xl" />
           <div>
             <div className="flex items-center font-semibold tracking-wide py-4">
               <div className="w-9 rounded-lg mr-4 h-1 bg-primary"></div>

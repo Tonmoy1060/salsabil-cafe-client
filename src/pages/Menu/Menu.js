@@ -21,7 +21,7 @@ const Menu = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://salsabil-cafe.onrender.com/items/${categoryRoute}`)
+    fetch(`https://salsabil-cafe-server-production.up.railway.app/items/${categoryRoute}`)
       .then((res) => res.json())
       .then((data) => {
         setAllItems(data);

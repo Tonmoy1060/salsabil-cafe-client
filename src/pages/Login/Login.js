@@ -6,6 +6,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import google from "../../assets//google.png";
 import auth from "../../firebase.init";
+import useToken from "../../hooks/useToken";
 import Loading from "../shared/Loading";
 
 
@@ -18,6 +19,8 @@ const Login = () => {
 
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
+  const [token] = useToken(user || gUser);
+  
   if (loading || gLoading) {
     return <Loading></Loading>;
   }
@@ -32,15 +35,17 @@ const Login = () => {
     event.target.reset();
   };
 
+
+
   const from = location.state?.from?.pathname || "/";
-  if (user || gUser) {
+  if (token) {
     navigate(from, { replace: true });
   }
 
   return (
-    <div className="lg:max-w-xs max-w-sm mx-auto pt-14 pb-10 mt-14 mb-14">
-      <div className="card lg:w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
+    <div className="lg:max-w-xs max-w-sm mx-auto pt-14 pb-10 mt-14 mb-14 p-2">
+      <div className="card lg:w-96 bg-base-100 shadow-xl ">
+        <div className="card-body ">
           <h2 className="text-center text-2xl text-info font-bold pb-1 font-serif">
             login
           </h2>

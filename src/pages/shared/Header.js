@@ -12,12 +12,20 @@ const Header = () => {
   const handleSignOut = (event) => {
     event.preventDefault();
     signOut(auth);
+    localStorage.removeItem('accessToken')
   };
   return (
     <div className="lg:px-5 mt-[-5px]">
       <div className="navbar bg-base-100 rounded-lg py-3 ">
         <div className="navbar-start">
+        <label
+                  htmlFor="my-drawer-2"
+                  className="btn btn-secondary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
+                >
+                  drawer
+                </label>
           <div className="dropdown">
+            
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,18 +87,18 @@ const Header = () => {
             </ul>
           </div>
           <div className=" lg:mx-7 mx-3 flex items-center">
-            <SiCoffeescript className="lg:text-5xl text-4xl text-accent mr-1 " />
+            <SiCoffeescript className="lg:text-5xl text-4xl text-accent mr-1 drop-shadow-xl" />
 
-            <div className="justify-center">
-              <Link className="normal-case text-2xl font-bold pb-0 mb-0 font-serif  ">
+            <div className="justify-center drop-shadow-xl">
+              <Link className="normal-case text-2xl font-bold pb-0 mb-0 font-serif  drop-shadow-xl">
                 SALSABIL
               </Link>{" "}
               <div className="pt-0 mt-0 text-sm flex items-center font-serif">
-                <IoIosReorder className="text-primary text-lg" />
+                <IoIosReorder className="text-primary text-lg drop-shadow-xl" />
 
-                <small>Cafe & Garden</small>
+                <small className="drop-shadow-xl">Cafe & Garden</small>
 
-                <IoIosReorder className="text-primary text-lg" />
+                <IoIosReorder className="text-primary text-lg drop-shadow-xl" />
               </div>
             </div>
           </div>

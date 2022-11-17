@@ -5,6 +5,7 @@ import auth from "../../firebase.init";
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import Loading from "../shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Register = () => {
   const location = useLocation();
@@ -14,6 +15,8 @@ const Register = () => {
 
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [updateProfile, eUpdating, updateError] = useUpdateProfile(auth);
+
+  const [token] = useToken(user || gUser);
   
 
   const  registerButton = async (event) => {
@@ -33,7 +36,7 @@ const Register = () => {
   }
 
   const from = location.state?.from?.pathname || "/";
-  if(user || gUser){
+  if(token){
     navigate(from, { replace: true });
   }
 

@@ -5,7 +5,7 @@
 // const useAllItems = () => {
 //    const [allItems, setAllItems] = useState([]);
 //    useEffect(() => {
-//       fetch('http://localhost:5000/items/Cold Drinks')
+//       fetch('https://salsabil-cafe-server-production.up.railway.app/items/Cold Drinks')
 //       .then(res => res.json())
 //       .then(data => setAllItems(data))
 //    },[]);

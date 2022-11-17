@@ -11,8 +11,9 @@ const Banner = () => {
         backgroundImage: `url(${bannerImage})`,
         backgroundSize: "cover",
       }}
-      className="p-5 "
+      className=" "
     >
+      <div className="p-5 hero-overlay">
       <div className="flex  items-center font-semibold tracking-wide lg:px-20 px-3 mx-3 my-[-10px] text-white">
         <div className="w-9 rounded-lg mr-4 h-1 bg-primary"></div>
         <h1 className=" tracking-wide font-mono capitalize">Hello, {user ? user.displayName : 'Anonymous'}</h1>
@@ -36,6 +37,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

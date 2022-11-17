@@ -55,7 +55,7 @@ const SpecificMenu = ({ item, handleAddToCart }) => {
           </div>
           <div className=" flex justify-between ">
             <div className="mr-2 pl-2 text-center lg:text-start md:text-start lg:p-0 md:p-0 mt-4">
-              <h1 className="text-2xl font-bold">{item?.name}</h1>
+              <h1 className="text-2xl font-bold">{item?.name} <small className="text-sm">{item?.quantity}</small></h1>
               <p className="py-1 text-xs">{item?.description}</p>
             </div>
             <div className="flex-col grid content-between">

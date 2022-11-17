@@ -8,7 +8,7 @@ const NewsLetters = () => {
         className="hero rounded-lg"
         style={{ backgroundImage: `url(${bottomBanner})` }}
       >
-        <div className="hero-overlay rounded-lg"></div>
+        <div className="hero-overlay  rounded-lg"></div>
         <div className="hero-content text-center  py-14 m-3">
           <div className="max-w-4xl">
             <div className="text-center text-neutral-content mb-14">

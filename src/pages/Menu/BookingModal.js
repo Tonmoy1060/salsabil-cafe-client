@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
+import useTimeAndDate from "../../hooks/useTimeAndDate";
 import Loading from "../shared/Loading";
 
 const BookingModal = ({
@@ -14,6 +15,7 @@ const BookingModal = ({
 
   const [user, uLoading, error] = useAuthState(auth);
   const [loading, setLoading] = useState(false);
+  const [timeAndDate] = useTimeAndDate();
 
   const buttonOrder = (e) => {
     e.preventDefault();
@@ -29,9 +31,10 @@ const BookingModal = ({
       address: address,
       totalOrder: index,
       amount: totalAmount,
+      date: timeAndDate
     };
 
-    fetch("https://salsabil-cafe.onrender.com/order", {
+    fetch("https://salsabil-cafe-server-production.up.railway.app/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,14 +85,14 @@ const BookingModal = ({
                 Your {index} order here
               </option>
               {addingCart.map((cart) => (
-                <option
+                <option disabled
                   key={cart._id}
                   className="flex items-center justify-between"
                 >
                   {" "}
                   <small>{cart.piece}</small>
                   <h1>* </h1>
-                  <small className="font-bold"> {cart.name} </small>
+                  <small className="font-bold"> {cart.name} {cart.quantity} </small>
                 </option>
               ))}
             </select>
@@ -231,6 +234,9 @@ const BookingModal = ({
               required
               className="input input-bordered input-sm w-full max-w-xs mt-1"
             />
+            <h1 className="badge block text-white mt-3">
+              date: {timeAndDate}
+            </h1>
             <h1 className="badge block text-white mt-3">
               Total: {totalAmount}
             </h1>

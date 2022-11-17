@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import PeopleReviews from "./PeopleReviews";
 
 const VisitorsSay = () => {
+  const [comments, setComments] = useState([]);
+  useEffect(() => {
+    fetch("https://salsabil-cafe-server-production.up.railway.app/review")
+      .then((res) => res.json())
+      .then((data) => setComments(data));
+  }, []);
   return (
     <div>
       <div className="text-center mt-14 pt-2">
@@ -15,31 +22,11 @@ const VisitorsSay = () => {
         </p>
       </div>
       <div className="lg:flex items-center my-10 mb-6">
-        <div className="card ">
-          <div className="card-body">
-            {/* <img className="max-w-[85px]" src={features} alt="" /> */}
-            <h2 className="card-title font-bold  my-3 font-serif font-serif ">
-              Menu for every taste
-            </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            {/* <img className="max-w-[85px]" src={features2} alt="" /> */}
-            <h2 className="card-title font-bold  my-3 font-serif ">
-              Always fresh ingredients
-            </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-        <div className="card ">
-          <div className="card-body ">
-            {/* <img className="max-w-[85px]" src={features3} alt="" /> */}
-            <h2 className="card-title  font-bold  my-3 font-serif ">
-              Experienced chefs
-            </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div>
+          <div className="lg:grid grid-cols-3 gap-3 px-3">
+            {comments?.slice(0, 3).map((review, index) => (
+              <PeopleReviews key={index} review={review}></PeopleReviews>
+            ))}
           </div>
         </div>
       </div>
