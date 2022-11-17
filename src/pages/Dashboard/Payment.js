@@ -35,7 +35,7 @@ const Payment = () => {
   }
 
   return (
-    <div className="w-1/2">
+    <div className="max-w-sm mx-auto p-3">
       <h1 className="text-2xl font-bold text-primary capitalize">
         Welcome {user?.displayName},
       </h1>

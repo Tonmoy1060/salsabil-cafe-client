@@ -15,7 +15,7 @@ const Header = () => {
     localStorage.removeItem('accessToken')
   };
   return (
-    <div className="lg:px-5 mt-[-5px]">
+    <div className="lg:px-5 px-1 mt-[-5px]">
       <div className="navbar bg-base-100 rounded-lg py-3 ">
         <div className="navbar-start">
         <label
