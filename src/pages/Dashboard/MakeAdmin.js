@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import Loading from "../shared/Loading";
 
 const MakeAdmin = () => {
@@ -19,7 +19,7 @@ const MakeAdmin = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        toast(`${email} is admin now`);
+        toast.success(`${email} is admin now`);
         e.target.reset();
         setLoading(false);
       });
@@ -41,6 +41,7 @@ const MakeAdmin = () => {
           <button className="btn btn-secondary text-white">Add</button>
         </form>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

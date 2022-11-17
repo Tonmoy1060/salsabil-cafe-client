@@ -52,7 +52,7 @@ const AddService = () => {
           })
             .then((response) => response.json())
             .then((data) => {
-              toast(`Successfully Added ${title} service`);
+              toast.success(`Successfully added ${title} service`);
               setLoading(false);
               e.target.reset();
             });

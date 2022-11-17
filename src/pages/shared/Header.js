@@ -12,20 +12,19 @@ const Header = () => {
   const handleSignOut = (event) => {
     event.preventDefault();
     signOut(auth);
-    localStorage.removeItem('accessToken')
+    localStorage.removeItem("accessToken");
   };
   return (
     <div className="lg:px-5 px-1 mt-[-5px]">
       <div className="navbar bg-base-100 rounded-lg py-3 ">
         <div className="navbar-start">
-        <label
-                  htmlFor="my-drawer-2"
-                  className="btn btn-secondary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
-                >
-                  drawer
-                </label>
+          {/* <label
+            htmlFor="my-drawer-2"
+            className="btn btn-secondary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
+          >
+            drawer
+          </label> */}
           <div className="dropdown">
-            
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

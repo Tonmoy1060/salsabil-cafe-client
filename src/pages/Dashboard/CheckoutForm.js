@@ -1,7 +1,7 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 
 const CheckoutForm = ({ exactBooking }) => {
@@ -130,6 +130,7 @@ const CheckoutForm = ({ exactBooking }) => {
         {cardError && <small className="text-red-500">{cardError}</small>}
         {success && <small className="text-green-500">{success}</small>}
       </div>
+      <ToastContainer></ToastContainer>
     </>
   );
 };

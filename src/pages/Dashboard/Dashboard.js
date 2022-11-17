@@ -14,7 +14,7 @@ const Dashboard = () => {
           <div>
             <div className="drawer drawer-mobile">
               <input
-                id="my-drawer-2"
+                id="dashboardDrawer"
                 type="checkbox"
                 className="drawer-toggle"
               />
@@ -22,79 +22,82 @@ const Dashboard = () => {
                 {/* <!-- Page content here --> */}
                 <Outlet></Outlet>
 
-                {/* <label
-                  htmlFor="my-drawer-2"
+                <label
+                  htmlFor="dashboardDrawer"
                   className="btn btn-secondary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
                 >
                   drawer
-                </label> */}
+                </label>
               </div>
-              <div className="drawer-side rounded-l-2xl">
-                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+              <div className="drawer-side rounded-l-2xl w-3/4 lg:w-full">
+                <label
+                  htmlFor="dashboardDrawer"
+                  className="drawer-overlay "
+                ></label>
+
                 <ul className="menu p-4  overflow-y-auto w-50 bg-orange-200 text-base-content">
                   {/* <!-- Sidebar content here --> */}
-                  <li className="flex  justify-start">
-                    <Link
-                      className="btn btn-ghost hover:text-white justify-start items-center flex justify-start"
-                      to="/dashboard"
-                    >
-                      Orders
-                    </Link>
-                  </li>
 
-                  {/* <li className="flex  justify-start">
-              <Link to={`/dashboard/book/+${}`}
-                className="btn btn-ghost hover:text-primary justify-start items-center text-secondary"
-              >
-                <AiOutlineShoppingCart className="text-xl" />
-                Book{" "}
-              </Link>
-            </li> */}
+                  <label
+                    htmlFor="dashboardDrawer"
+                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                  >
+                    <Link to="/dashboard">Orders</Link>
+                  </label>
 
-                  <li className="flex  justify-start">
+
+                  <label
+                    htmlFor="dashboardDrawer"
+                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                  >
                     <Link
-                      className="btn btn-ghost hover:text-white justify-start items-center "
                       to="/dashboard/review"
                     >
-                      {/* <MdOutlineRateReview className="text-lg" /> */}
+
                       Review
                     </Link>
-                  </li>
+                  </label>
                   {admin && (
-                    <li className="flex  justify-start">
+                    <label
+                    htmlFor="dashboardDrawer"
+                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                  >
                       <Link
-                        className="btn btn-ghost hover:text-white justify-start items-center"
                         to="/dashboard/makeAdmin"
                       >
                         {" "}
                         {/* <MdGroupAdd className="text-lg" /> */}
                         Make Admin
                       </Link>
-                    </li>
+                    </label>
                   )}
                   {admin && (
-                    <li className="flex  justify-start">
+                    <label
+                    htmlFor="dashboardDrawer"
+                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                  >
                       <Link
-                        className="btn btn-ghost hover:text-white justify-start items-center "
                         to="/dashboard/fillOrderList"
                       >
                         {" "}
                         {/* <GoListOrdered className="text-lg" /> */}
                         All Orders
                       </Link>
-                    </li>
+                    </label>
                   )}
                   {admin && (
-                    <li>
+                    <label
+                    htmlFor="dashboardDrawer"
+                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                  >
                       <Link
-                        className="btn btn-ghost hover:text-white justify-start items-center "
                         to="/dashboard/addItem"
                       >
                         {" "}
                         {/* <MdOutlineAdd className="text-lg" /> */}
                         Add Item
                       </Link>
-                    </li>
+                    </label>
                   )}
                 </ul>
               </div>
