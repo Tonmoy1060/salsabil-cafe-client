@@ -45,26 +45,32 @@ const Dashboard = () => {
                     <Link to="/dashboard">Orders</Link>
                   </label>
 
-
                   <label
                     htmlFor="dashboardDrawer"
                     className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
                   >
-                    <Link
-                      to="/dashboard/review"
-                    >
-
-                      Review
-                    </Link>
+                    <Link to="/dashboard/review">Review</Link>
                   </label>
+
                   {admin && (
                     <label
-                    htmlFor="dashboardDrawer"
-                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
-                  >
-                      <Link
-                        to="/dashboard/makeAdmin"
-                      >
+                      htmlFor="dashboardDrawer"
+                      className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                    >
+                      <Link to="/dashboard/customOrder">
+                        {" "}
+                        {/* <MdOutlineAdd className="text-lg" /> */}
+                        Custom Order's
+                      </Link>
+                    </label>
+                  )}
+
+                  {admin && (
+                    <label
+                      htmlFor="dashboardDrawer"
+                      className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                    >
+                      <Link to="/dashboard/makeAdmin">
                         {" "}
                         {/* <MdGroupAdd className="text-lg" /> */}
                         Make Admin
@@ -73,12 +79,10 @@ const Dashboard = () => {
                   )}
                   {admin && (
                     <label
-                    htmlFor="dashboardDrawer"
-                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
-                  >
-                      <Link
-                        to="/dashboard/fillOrderList"
-                      >
+                      htmlFor="dashboardDrawer"
+                      className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                    >
+                      <Link to="/dashboard/fillOrderList">
                         {" "}
                         {/* <GoListOrdered className="text-lg" /> */}
                         All Orders
@@ -87,12 +91,10 @@ const Dashboard = () => {
                   )}
                   {admin && (
                     <label
-                    htmlFor="dashboardDrawer"
-                    className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
-                  >
-                      <Link
-                        to="/dashboard/addItem"
-                      >
+                      htmlFor="dashboardDrawer"
+                      className="btn btn-ghost hover:text-white justify-start items-center flex justify-start "
+                    >
+                      <Link to="/dashboard/addItem">
                         {" "}
                         {/* <MdOutlineAdd className="text-lg" /> */}
                         Add Item

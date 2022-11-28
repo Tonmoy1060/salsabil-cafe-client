@@ -66,9 +66,9 @@ const OrderedItems = () => {
                   </select>
                 </td>
 
-                <td>
+                <td className="">
                   {booking?.paid ? (
-                    <p className="text-primary">PAID</p>
+                    <p className={`${booking.isAdmin ? 'text-accent' : 'text-primary'} inline`}>PAID</p>
                   ) : (
                     <Link
                       to={`/dashboard/payment/${booking?._id}`}
@@ -77,6 +77,7 @@ const OrderedItems = () => {
                       {booking?.amount} Tk
                     </Link>
                   )}
+                  {booking.isAdmin && <p className="text-primary text-xs inline">Admin</p>}
                 </td>
               </tr>
             ))}

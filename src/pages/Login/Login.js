@@ -44,7 +44,7 @@ const Login = () => {
 
   return (
     <div className="lg:max-w-xs max-w-sm mx-auto pt-14 pb-10 mt-14 mb-14 p-2">
-      <div className="card lg:w-96 bg-base-100 shadow-xl ">
+      <div className="card max-w-full bg-base-100 shadow-xl ">
         <div className="card-body ">
           <h2 className="text-center text-2xl text-info font-bold pb-1 font-serif">
             login
@@ -106,7 +106,7 @@ const Login = () => {
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-primary text-white my-4"
+            className="btn btn-accent text-white my-4"
           >
             <img src={google} alt="" />
             google login

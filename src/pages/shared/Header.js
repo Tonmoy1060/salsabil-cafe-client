@@ -15,8 +15,8 @@ const Header = () => {
     localStorage.removeItem("accessToken");
   };
   return (
-    <div className="lg:px-5 px-1 mt-[-5px]">
-      <div className="navbar bg-base-100 rounded-lg py-3 ">
+    <div className="lg:px-5 px-1 ">
+      <div className="navbar bg-base-100 rounded-b-lg py-4 ">
         <div className="navbar-start">
           {/* <label
             htmlFor="my-drawer-2"
@@ -52,6 +52,9 @@ const Header = () => {
               <li>
                 <Link to={"menu"}>Menu</Link>
               </li>
+              {/* <li>
+                <Link to={"video"}>v</Link>
+              </li> */}
               <li>
                 <Link to={"about"}>About</Link>
               </li>
@@ -111,6 +114,9 @@ const Header = () => {
             <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
               <Link to={"menu/"}>Menu</Link>
             </li>
+            {/* <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+              <Link to={"video"}>V</Link>
+            </li> */}
             <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
               <Link to={"about"}>About</Link>
             </li>

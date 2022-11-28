@@ -17,6 +17,8 @@ import FullOrderList from "./pages/Dashboard/FullOrderList";
 import Payment from "./pages/Dashboard/Payment";
 import AddService from "./pages/Dashboard/AddService";
 import Review from "./pages/Dashboard/Review";
+import Video from "./pages/Home/About/Video";
+import CustomOrder from "./pages/Dashboard/CustomOrder";
 
 function App() {
 
@@ -32,6 +34,7 @@ function App() {
         <Route path="menu" element={<Menu></Menu>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
         <Route path="register" element={<Register></Register>}></Route>
+        {/* <Route path="video" element={<Video></Video>}></Route> */}
         <Route path="dashboard" element={<Dashboard></Dashboard>}></Route>
         <Route path="dashboard" element={<Dashboard></Dashboard>}>
           <Route index element={<OrderedItems></OrderedItems>}>
@@ -53,6 +56,9 @@ function App() {
             {" "}
           </Route>
           <Route path="addItem" element={<RequireAdmin><AddService></AddService></RequireAdmin>}>
+            {" "}
+          </Route>
+          <Route path="customOrder" element={<RequireAdmin><CustomOrder></CustomOrder></RequireAdmin>}>
             {" "}
           </Route>
         </Route>

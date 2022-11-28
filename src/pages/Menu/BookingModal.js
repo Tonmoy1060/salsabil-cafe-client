@@ -11,6 +11,7 @@ const BookingModal = ({
   totalAmount,
   setAddingCart,
   index,
+  adminChecked
 }) => {
 
   const [user, uLoading, error] = useAuthState(auth);
@@ -23,15 +24,26 @@ const BookingModal = ({
     const email = e.target.email.value;
     const number = e.target.number.value;
     const address = e.target.address.value;
+    const name = e.target.name.value;
+   
+    const paid = adminChecked;
+    const delivered = adminChecked;
+    const isAdmin = adminChecked;
+
+    
 
     const order = {
       orderItems: addingCart,
       client: email,
+      name: name,
       number: number,
       address: address,
       totalOrder: index,
       amount: totalAmount,
-      date: timeAndDate
+      date: timeAndDate,
+      paid: paid,
+      delevered: delivered,
+      isAdmin: isAdmin
     };
 
     fetch("https://salsabil-cafe-server-production.up.railway.app/order", {
@@ -106,7 +118,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order0?.name}
                   </h3>
                 </div>
@@ -120,7 +132,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order1?.name}
                   </h3>
                 </div>
@@ -134,7 +146,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order2?.name}
                   </h3>
                 </div>
@@ -148,7 +160,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order3?.name}
                   </h3>
                 </div>
@@ -162,7 +174,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order4?.name}
                   </h3>
                 </div>
@@ -176,7 +188,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order5?.name}
                   </h3>
                 </div>
@@ -190,7 +202,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order6?.name}
                   </h3>
                 </div>
@@ -204,7 +216,7 @@ const BookingModal = ({
                 </span>
 
                 <div className="grid bg-base-200 place-items-center">
-                  <h3 className="font-bold text-lg px-1">
+                  <h3 className="font-bold text-sm px-1">
                     {modalData?.order7?.name}
                   </h3>
                 </div>
@@ -220,6 +232,13 @@ const BookingModal = ({
               readOnly
               className="input input-bordered input-sm w-full max-w-xs mt-1"
             />
+              <input
+                type="text"
+                name="name"
+                placeholder="Client Name"
+                required
+                className="input input-bordered input-sm w-full max-w-xs mt-1"
+              />
             <input
               type="phone"
               name="number"

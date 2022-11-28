@@ -14,6 +14,7 @@ const Menu = () => {
   const [modalData, setModalData] = useState({});
   const [categoryRoute, setCategoryRoute] = useState(" ");
   const [totalAmount, setTotalAmount] = useState();
+  const [adminChecked, setAdminChecked] = useState(false);
 
   if (!categoryRoute || !allItems) {
     setLoading(true);
@@ -80,11 +81,12 @@ const Menu = () => {
               addingCart={addingCart}
               setAddingCart={setAddingCart}
               handleModal={handleModal}
+              setAdminChecked={setAdminChecked}
             ></Cart>
           </div>
         )}
       </div>
-      <div className="card max-w-full bg-base-100   shadow-2xl py-0 my-0 lg:mx-20 md:mx-14 mx-2">
+      <div className="card max-w-full bg-base-100  shadow-2xl py-0 my-0 lg:mx-20 md:mx-14 mx-2">
         <div className="card-body py-0 mb-20">
           <div>
             <div className="text-center lg:pt-8 pt-4">
@@ -166,7 +168,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-      <BookingModal modalData={modalData} totalAmount={totalAmount} addingCart={addingCart} setAddingCart={setAddingCart} index={index}></BookingModal>
+      <BookingModal modalData={modalData} totalAmount={totalAmount} addingCart={addingCart} setAddingCart={setAddingCart} adminChecked={adminChecked} index={index}></BookingModal>
     </div>
   );
 };

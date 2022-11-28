@@ -3,41 +3,21 @@ import { useQuery } from "react-query";
 import { toast } from "react-toastify";
 import Loading from "../shared/Loading";
 
-const FullOrderList = () => {
+const CustomOrder = () => {
   const [loading, setLoading] = useState(false);
 
-
   const {
-    data: orders,
+    data: customOrders,
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("https://salsabil-cafe-server-production.up.railway.app/orders", {
+    fetch("https://salsabil-cafe-server-production.up.railway.app/order/true", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     }).then((res) => res.json())
   );
-
-
-  const handleDelevered = (e) => {
-    setLoading(true);
-
-    fetch(`https://salsabil-cafe-server-production.up.railway.app/delevered/${e}`, {
-      method: "PUT", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(orders),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        refetch();
-        setLoading(false);
-      });
-  };
 
   if (loading || isLoading) {
     return <Loading></Loading>;
@@ -51,18 +31,18 @@ const FullOrderList = () => {
               <th></th>
               <th>Client Details</th>
               <th>Order Details</th>
-              <th>Status</th>
+              <th>Admin</th>
             </tr>
           </thead>
           <tbody>
-            {orders.map((order, index) => (
+            {customOrders.map((order, index) => (
               <tr key={index}>
                 <th>{index + 1}</th>
 
                 <th>
                   <select className="select select-sm select-primary w-full max-w-xs">
                     <option disabled selected>
-                      {order.client}
+                      {order.name}
                     </option>
                     <option disabled>Date: {order.date}</option>
                     <option disabled>Number: {order.number}</option>
@@ -84,23 +64,9 @@ const FullOrderList = () => {
                     ))}
                   </select>
                 </th>
-                {order.paid ? (
-                  <td className="text-green-500">
-                    {" "}
-                    {order.delevered ? (
-                      "delevered"
-                    ) : (
-                      <button
-                        onClick={() => handleDelevered(order._id)}
-                        className="btn btn-xs btn-accent text-white"
-                      >
-                        Paid
-                      </button>
-                    )}{" "}
-                  </td>
-                ) : (
-                  <td className="text-orange-500">Pending</td>
-                )}
+                <td>
+                  {order.client}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -110,4 +76,4 @@ const FullOrderList = () => {
   );
 };
 
-export default FullOrderList;
+export default CustomOrder;

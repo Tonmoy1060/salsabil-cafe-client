@@ -41,8 +41,8 @@ const Register = () => {
   }
 
   return (
-    <div className="max-w-xs mx-auto pt-10 pb-10 mt-10 mb-10 ">
-      <div className="card w-96 bg-base-100 shadow-2xl ">
+    <div className="lg:max-w-xs max-w-sm mx-auto pt-14 pb-10 mt-14 mb-14 p-2">
+      <div className="card max-w-full bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-serif text-info font-bold ">
             Register
@@ -109,7 +109,7 @@ const Register = () => {
             </label>
           </form>
           <div className="divider">OR</div>
-          <button onClick={() => signInWithGoogle()} className="btn btn-primary text-white">
+          <button onClick={() => signInWithGoogle()} className="btn btn-accent text-white">
             <img src={google} alt="" />
             google
           </button>

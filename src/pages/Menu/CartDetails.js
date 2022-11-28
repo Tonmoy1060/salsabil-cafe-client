@@ -7,7 +7,7 @@ const CartDetails = ({ cart, deleteFromCart }) => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div>
+    <div className="max-w-xs">
       <div className="flex justify-between max-w-xs ">
         <div className="flex items-center">
           <div className="avatar">
