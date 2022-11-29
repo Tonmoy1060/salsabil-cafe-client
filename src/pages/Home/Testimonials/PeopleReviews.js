@@ -6,7 +6,7 @@ const PeopleReviews = ({review}) => {
     <div className="w-full rounded-xl mb-8 p-5 transition ease-in-out delay-100 hover:shadow-2xl hover:-translate-y-1 hover:scale-110 duration-700 ...">
       <div className="flex items-center">
         <div className="avatar">
-          <div className="w-14 mr-4 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+          <div className="w-12 mr-4 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <img  src={img} />
           </div>
         </div>

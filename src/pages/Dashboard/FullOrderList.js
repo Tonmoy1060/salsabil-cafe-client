@@ -57,11 +57,11 @@ const FullOrderList = () => {
           </thead>
           <tbody>
             {orders.map((order, index) => (
-              <tr className={`${order.isAdmin && "text-primary"}`} key={index}>
+              <tr className={`${order.isAdmin && "text-secondary"}`} key={index}>
                 <th>{index + 1}</th>
 
                 <th>
-                  <select className="select select-sm select-primary w-full max-w-xs">
+                  <select className="select select-sm select-secondary w-full max-w-xs">
                     <option disabled selected>
                       {order.client}
                     </option>
@@ -73,7 +73,7 @@ const FullOrderList = () => {
                   </select>
                 </th>
                 <th>
-                  <select className="select select-sm select-primary w-full max-w-xs">
+                  <select className="select select-sm select-secondary w-full max-w-xs">
                     <option disabled selected>
                       Orders
                     </option>
@@ -98,7 +98,7 @@ const FullOrderList = () => {
                         Paid
                       </button>
                     )}{" "}
-                    {order.isAdmin && <p className="text-primary text-xs">Ad</p>}
+                    {order.isAdmin && <p className="text-secondary text-xs">Ad</p>}
                   </td>
                 ) : (
                   <td className="text-orange-500">Pending</td>

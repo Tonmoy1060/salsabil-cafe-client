@@ -20,7 +20,7 @@ const Header = () => {
         <div className="navbar-start">
           {/* <label
             htmlFor="my-drawer-2"
-            className="btn btn-secondary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
+            className="btn btn-primary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
           >
             drawer
           </label> */}
@@ -68,19 +68,19 @@ const Header = () => {
                 </Link>
               </li> */}
               {user && (
-                <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                <li className=" hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
                   <Link to="dashboard">Dashboard</Link>
                 </li>
               )}
 
               {user ? (
-                <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                <li className=" hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
                   <Link onClick={handleSignOut} to="login">
                     Sign Out
                   </Link>
                 </li>
               ) : (
-                <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+                <li className=" hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
                   <Link to={"login"}>
                     <FaSignInAlt className="text-2xl text-secondary " />
                   </Link>
@@ -96,35 +96,35 @@ const Header = () => {
                 SALSABIL
               </Link>{" "}
               <div className="pt-0 mt-0 text-sm flex items-center font-serif">
-                <IoIosReorder className="text-primary text-lg drop-shadow-xl" />
+                <IoIosReorder className="text-secondary text-lg drop-shadow-xl" />
 
                 <small className="drop-shadow-xl">Cafe & Garden</small>
 
-                <IoIosReorder className="text-primary text-lg drop-shadow-xl" />
+                <IoIosReorder className="text-secondary text-lg drop-shadow-xl" />
               </div>
             </div>
           </div>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden lg:flex ">
           <ul className="menu menu-horizontal p-0 mr-3">
-            <li className="  hover:underline hover:text-primary decoration-primary decoration-4 underline-offset-[35px] ">
+            <li className="  hover:underline hover:text-secondary decoration-secondary decoration-4 underline-offset-[32.5px] ">
               <Link to={"/"}>Home</Link>
             </li>
 
-            <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+            <li className="  hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
               <Link to={"menu/"}>Menu</Link>
             </li>
-            {/* <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+            {/* <li className="  hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
               <Link to={"video"}>V</Link>
             </li> */}
-            <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+            <li className="  hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
               <Link to={"about"}>About</Link>
             </li>
 
-            <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+            <li className="  hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
               <Link to={"contact"}>Contact</Link>
             </li>
-            {/* <li className="  hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+            {/* <li className="  hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
               <Link className="btn btn-lg btn-primary text-white">
                 Reservation
               </Link>
@@ -132,19 +132,19 @@ const Header = () => {
             </li> */}
 
             {user && (
-              <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+              <li className=" hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
                 <Link to="dashboard">Dashboard</Link>
               </li>
             )}
 
             {user ? (
-              <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+              <li className=" hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
                 <Link onClick={handleSignOut} to="login">
                   Sign Out
                 </Link>
               </li>
             ) : (
-              <li className=" hover:underline hover:text-primary  decoration-primary decoration-4 underline-offset-[35px]">
+              <li className=" hover:underline hover:text-secondary  decoration-secondary decoration-4 underline-offset-[32.5px]">
                 <Link to={"login"}>
                   <FaSignInAlt className="text-2xl text-secondary " />
                 </Link>

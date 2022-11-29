@@ -11,7 +11,7 @@ const Reservation = () => {
           <img src={reserveImg} className="lg:max-w-lg md:max-w-md max-w-xs rounded-lg" />
           <div className="max-w-xs lg:max-w-xl pr-5 lg:p-0">
             <div className="flex items-center font-semibold tracking-wide py-4">
-              <div className="w-9 rounded-lg mr-4 h-1 bg-primary"></div>
+              <div className="w-9 rounded-lg mr-4 h-1 bg-secondary"></div>
               <h1 className=" tracking-wide">RESERVATION</h1>
             </div>
             <h1 className="text-lg:5xl text-3xl font-bold  font-serif">This evening will be great!</h1>

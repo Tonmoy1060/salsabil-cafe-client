@@ -36,7 +36,7 @@ const Payment = () => {
 
   return (
     <div className="max-w-sm mx-auto p-3">
-      <h1 className="text-2xl font-bold text-primary capitalize">
+      <h1 className="text-2xl font-bold text-secondary capitalize">
         Welcome {user?.displayName},
       </h1>
       <p className="text-xs font-semibold mb-4">
@@ -53,7 +53,7 @@ const Payment = () => {
           defaultValue={user?.email}
           className="input font-semibold rounded-sm w-full max-w-lg my-3"
         />
-        <select className="select select-md select-primary w-full max-w-md">
+        <select className="select select-md select-secondary w-full max-w-md">
                     <option disabled selected>
                       Paying For
                     </option>

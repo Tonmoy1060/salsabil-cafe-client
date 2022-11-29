@@ -6,7 +6,7 @@ const VisitorsDaily = () => {
       <div className="card text-center">
         <div className="card-body tracking-wide ">
           <h2 className="card-title text-5xl font-semibold justify-center font-serif ">
-            200 <span className=" ml-2 text-5xl text-primary">+</span>
+            200 <span className=" ml-2 text-5xl text-secondary">+</span>
           </h2>
           <p className="tracking-wide  mt-2">VISITORS DAILY</p>
         </div>
@@ -14,7 +14,7 @@ const VisitorsDaily = () => {
       <div className="card text-center ">
         <div className="card-body tracking-wide">
           <h2 className="card-title text-5xl font-semibold justify-center font-serif ">
-            400 <span className=" ml-2 text-5xl text-primary">+</span>
+            400 <span className=" ml-2 text-5xl text-secondary">+</span>
           </h2>
           <p className="tracking-wide mt-2">DELIVERIES MONTHLY</p>
         </div>
@@ -22,14 +22,14 @@ const VisitorsDaily = () => {
       <div className="card text-center">
         <div className="card-body tracking-wide ">
           <h2 className="card-title text-5xl font-semibold  justify-center font-serif ">
-            100 <span className=" ml-2 text-5xl text-primary">%</span>
+            100 <span className=" ml-2 text-5xl text-secondary">%</span>
           </h2>
           <p className="tracking-wide mt-2">POSITIVE FEEDBACK</p>
         </div>
       </div>
       <div className="card text-center">
         <div className="card-body tracking-wide">
-          <h2 className="card-title text-5xl font-semibold justify-center font-serif ">40 <span className=" ml-2 text-5xl text-primary">+</span></h2>
+          <h2 className="card-title text-5xl font-semibold justify-center font-serif ">40 <span className=" ml-2 text-5xl text-secondary">+</span></h2>
           <p className="tracking-wide mt-2">AWARDS AND HONORS</p>
           
         </div>

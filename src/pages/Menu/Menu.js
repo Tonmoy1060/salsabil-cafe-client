@@ -140,7 +140,7 @@ const Menu = () => {
                 </ul>
               </div>
               <div className="">
-                <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-primary"></div>
+                <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-secondary"></div>
                 <h4 className="text-lg tracking-wide font-bold pt-2">
                   Our menu
                 </h4>

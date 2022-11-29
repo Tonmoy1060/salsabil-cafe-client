@@ -35,9 +35,9 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
     <div className="fixed top-[60px] mt-0 right-0 z-40">
       <div className="collapse p-0">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title py-0 pt-3 rounded-full bg-base-900 text-end p-0 text-primary-content  peer-checked:text-secondary-content">
+        <div className="collapse-title py-0 pt-3 rounded-full bg-base-900 text-end p-0 text-secondary-content  peer-checked:text-secondary-content">
           <div className="indicator text-end lg:px-8 md:px-8 px-4 shadow-lg lg:py-6 md:py-6 py-3 bg-black bg-opacity-80 ">
-            <span className="indicator-item badge   badge-primary text-white mt-4 mr-5">
+            <span className="indicator-item badge   badge-secondary text-white mt-4 mr-5">
               {addingCart?.length}
             </span>
             {/* <span className=""> */}
@@ -45,7 +45,7 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
             {/* </span> */}
           </div>
         </div>
-        <div className="collapse-content shadow-2xl p-0 text-primary-content  peer-checked:text-secondary-content ">
+        <div className="collapse-content shadow-2xl p-0 text-secondary-content  peer-checked:text-secondary-content ">
           <div className="card bg-base-300 rounded-sm">
             <div className="mb-3 ">
               <div className="card-body p-2">

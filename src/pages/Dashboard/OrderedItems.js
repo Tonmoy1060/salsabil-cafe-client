@@ -33,7 +33,7 @@ const OrderedItems = () => {
   }
   return (
     <div>
-      <h1 className="text-2xl font-bold text-primary capitalize">
+      <h1 className="text-2xl font-bold text-secondary capitalize">
         Welcome {user?.displayName},
       </h1>
       <p className="text-sm font-semibold mb-4">your order list here</p>
@@ -54,7 +54,7 @@ const OrderedItems = () => {
                 <th>{index + 1}</th>
 
                 <td>
-                  <select className="select select-primary  select-sm w-full max-w-xs">
+                  <select className="select select-secondary  select-sm w-full max-w-xs">
                     <option disabled selected >
                       {booking?.date} Orders
                     </option>
@@ -68,7 +68,7 @@ const OrderedItems = () => {
 
                 <td className="">
                   {booking?.paid ? (
-                    <p className={`${booking.isAdmin ? 'text-accent' : 'text-primary'} inline`}>PAID</p>
+                    <p className={`${booking.isAdmin ? 'text-accent' : 'text-secondary'} inline`}>PAID</p>
                   ) : (
                     <Link
                       to={`/dashboard/payment/${booking?._id}`}
@@ -77,7 +77,7 @@ const OrderedItems = () => {
                       {booking?.amount} Tk
                     </Link>
                   )}
-                  {booking.isAdmin && <p className="text-primary text-xs inline">Admin</p>}
+                  {booking.isAdmin && <p className="text-secondary text-xs inline">Admin</p>}
                 </td>
               </tr>
             ))}

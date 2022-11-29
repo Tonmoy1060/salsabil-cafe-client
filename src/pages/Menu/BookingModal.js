@@ -113,7 +113,7 @@ const BookingModal = ({
           <div>
             {modalData?.order0?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order0?.piece}
                 </span>
 
@@ -127,7 +127,7 @@ const BookingModal = ({
 
             {modalData?.order1?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order1?.piece}
                 </span>
 
@@ -141,7 +141,7 @@ const BookingModal = ({
 
             {modalData?.order2?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order2?.piece}
                 </span>
 
@@ -155,7 +155,7 @@ const BookingModal = ({
 
             {modalData?.order3?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order3?.piece}
                 </span>
 
@@ -169,7 +169,7 @@ const BookingModal = ({
 
             {modalData?.order4?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order4?.piece}
                 </span>
 
@@ -183,7 +183,7 @@ const BookingModal = ({
 
             {modalData?.order5?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order5?.piece}
                 </span>
 
@@ -197,7 +197,7 @@ const BookingModal = ({
 
             {modalData?.order6?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order6?.piece}
                 </span>
 
@@ -211,7 +211,7 @@ const BookingModal = ({
 
             {modalData?.order7?.piece && (
               <div className="m-1 indicator">
-                <span className="indicator-item badge badge-primary">
+                <span className="indicator-item badge badge-secondary">
                   {modalData?.order7?.piece}
                 </span>
 

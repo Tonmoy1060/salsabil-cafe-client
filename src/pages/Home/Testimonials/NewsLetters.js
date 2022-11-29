@@ -12,7 +12,7 @@ const NewsLetters = () => {
         <div className="hero-content text-center  py-14 m-3">
           <div className="max-w-4xl">
             <div className="text-center text-neutral-content mb-14">
-              <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-primary"></div>
+              <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-secondary"></div>
               <h4 className="text-md tracking-wide font-bold ">NEWSLETTER</h4>
               <h1 className="font-bold lg:text-6xl md:text-5xl text-3xl my-5 font-serif ">
               Subscribe our newsletter

@@ -24,7 +24,7 @@ const Dashboard = () => {
 
                 <label
                   htmlFor="dashboardDrawer"
-                  className="btn btn-secondary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
+                  className="btn btn-primary flex absolute right-2 top-2 btn-xs md:btn-lg lg:btn-lg text-white drawer-button lg:hidden"
                 >
                   drawer
                 </label>

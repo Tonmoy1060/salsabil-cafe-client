@@ -38,7 +38,7 @@ const MakeAdmin = () => {
             placeholder="Email"
             className="input input-bordered"
           />
-          <button className="btn btn-secondary text-white">Add</button>
+          <button className="btn btn-primary text-white">Add</button>
         </form>
       </div>
       <ToastContainer></ToastContainer>

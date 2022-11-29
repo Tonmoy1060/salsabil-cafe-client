@@ -14,7 +14,7 @@ const WorkingHour = () => {
             <div className="hero-content flex-col lg:flex-row lg:pr-0.5 ">
               <div className="text-center lg:text-left  text-white lg:pr-14 lg:mr-14">
                 <div className="flex items-center font-semibold tracking-wide py-4">
-                  <div className="w-9 rounded-lg mr-4 h-1 bg-primary"></div>
+                  <div className="w-9 rounded-lg mr-4 h-1 bg-secondary"></div>
                   <h1 className=" tracking-wide font-mono">ABOUT US</h1>
                 </div>
                 <h1 className="lg:text-5xl text-4xl font-bold font-serif ">Working hours</h1>
@@ -32,10 +32,10 @@ const WorkingHour = () => {
                     <h1 className="font-semibold ">EVERY SEVEN DAY</h1>
                     <div className="my-6 font-serif ">
                       <p className="font-bold text-2xl">
-                        09<span className="text-primary"> : </span>00
+                        09<span className="text-secondary"> : </span>00
                       </p>
                       <p className="font-bold text-2xl">
-                        22<span className="text-primary"> : </span>00
+                        22<span className="text-secondary"> : </span>00
                       </p>
                     </div>
                   </div>
@@ -43,10 +43,10 @@ const WorkingHour = () => {
                     <h1 className="font-semibold ">EVERY FESTIVAL DAY</h1>
                     <div className="my-6 font-serif ">
                       <p className="font-bold text-2xl">
-                        24<span className="text-primary"> / </span>07
+                        24<span className="text-secondary"> / </span>07
                       </p>
                       <p className="font-bold text-2xl">
-                        24<span className="text-primary"> / </span>07
+                        24<span className="text-secondary"> / </span>07
                       </p>
                     </div>
                   </div>

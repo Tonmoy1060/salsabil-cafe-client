@@ -40,7 +40,7 @@ const CustomOrder = () => {
                 <th>{index + 1}</th>
 
                 <th>
-                  <select className="select select-sm select-primary w-full max-w-xs">
+                  <select className="select select-sm select-secondary w-full max-w-xs">
                     <option disabled selected>
                       {order.name}
                     </option>
@@ -52,7 +52,7 @@ const CustomOrder = () => {
                   </select>
                 </th>
                 <th>
-                  <select className="select select-sm select-primary w-full max-w-xs">
+                  <select className="select select-sm select-secondary w-full max-w-xs">
                     <option disabled selected>
                       Orders
                     </option>
