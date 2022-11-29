@@ -86,7 +86,7 @@ const FullOrderList = () => {
                   </select>
                 </th>
                 {order.paid ? (
-                  <td className={`${order.isAdmin ? 'text-accent' : 'text-green-500'} ' flex '`}>
+                  <td className={`${order.isAdmin ? 'text-accent' : 'text-green-500'} 'inline'`}>
                     {" "}
                     {order.delevered ? (
                       "delivered"
@@ -97,8 +97,8 @@ const FullOrderList = () => {
                       >
                         Paid
                       </button>
-                    )}{" "}
-                    {order.isAdmin && <p className="text-secondary text-xs">Ad</p>}
+                    )}
+                    {order.isAdmin && <p className="text-secondary text-xs inline">Ad</p>}
                   </td>
                 ) : (
                   <td className="text-orange-500">Pending</td>

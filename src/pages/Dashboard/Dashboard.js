@@ -18,7 +18,7 @@ const Dashboard = () => {
                 type="checkbox"
                 className="drawer-toggle"
               />
-              <div className="drawer-content lg:p-28 p-0 md:p-5 bg-yellow-50">
+              <div className="drawer-content lg:p-10 p-0 md:p-5 bg-yellow-50">
                 {/* <!-- Page content here --> */}
                 <Outlet></Outlet>
 
