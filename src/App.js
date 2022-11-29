@@ -19,6 +19,7 @@ import AddService from "./pages/Dashboard/AddService";
 import Review from "./pages/Dashboard/Review";
 import Video from "./pages/Home/About/Video";
 import CustomOrder from "./pages/Dashboard/CustomOrder";
+import PageNotFound from "./pages/shared/PageNotFound";
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
             {" "}
           </Route>
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
       <Footer></Footer>

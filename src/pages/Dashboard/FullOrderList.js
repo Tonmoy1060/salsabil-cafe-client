@@ -6,7 +6,6 @@ import Loading from "../shared/Loading";
 const FullOrderList = () => {
   const [loading, setLoading] = useState(false);
 
-
   const {
     data: orders,
     isLoading,
@@ -20,18 +19,20 @@ const FullOrderList = () => {
     }).then((res) => res.json())
   );
 
-
   const handleDelevered = (e) => {
     setLoading(true);
 
-    fetch(`https://salsabil-cafe-server-production.up.railway.app/delevered/${e}`, {
-      method: "PUT", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(orders),
-    })
+    fetch(
+      `https://salsabil-cafe-server-production.up.railway.app/delevered/${e}`,
+      {
+        method: "PUT", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(orders),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         refetch();
@@ -56,7 +57,7 @@ const FullOrderList = () => {
           </thead>
           <tbody>
             {orders.map((order, index) => (
-              <tr key={index}>
+              <tr className={`${order.isAdmin && "text-primary"}`} key={index}>
                 <th>{index + 1}</th>
 
                 <th>
@@ -85,10 +86,10 @@ const FullOrderList = () => {
                   </select>
                 </th>
                 {order.paid ? (
-                  <td className="text-green-500">
+                  <td className={`${order.isAdmin ? 'text-accent' : 'text-green-500'} ' flex '`}>
                     {" "}
                     {order.delevered ? (
-                      "delevered"
+                      "delivered"
                     ) : (
                       <button
                         onClick={() => handleDelevered(order._id)}
@@ -97,6 +98,7 @@ const FullOrderList = () => {
                         Paid
                       </button>
                     )}{" "}
+                    {order.isAdmin && <p className="text-primary text-xs">Ad</p>}
                   </td>
                 ) : (
                   <td className="text-orange-500">Pending</td>
