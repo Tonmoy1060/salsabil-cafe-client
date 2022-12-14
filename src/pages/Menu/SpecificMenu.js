@@ -6,7 +6,9 @@ import Cart from "./Cart";
 
 const SpecificMenu = ({ item, handleAddToCart }) => {
   const [loading, setLoading] = useState(false);
+  // state for set total pieces of item
   const [piece, setPiece] = useState(1);
+  // state for set total piece * price
   const [newPrice, setNewPrice] = useState(item?.price);
   const [newAllItems, setNewAllItems] = useState(item);
 
@@ -14,12 +16,14 @@ const SpecificMenu = ({ item, handleAddToCart }) => {
     setLoading(true);
   }
 
+  // handler for increase-quantity
   const handleIncrease = async (event) => {
     if (piece >= 0) {
       setLoading(true);
       setPiece(piece + 1);
 
       setNewPrice(newPrice + item?.price);
+      // update item based on piece and newPrice
       item["newPrice"] = newPrice + item?.price;
       setNewAllItems(item);
       item["piece"] = (await piece) + 1;
@@ -27,12 +31,15 @@ const SpecificMenu = ({ item, handleAddToCart }) => {
       setLoading(false);
     }
   };
+
+  // handler for decrease-quantity
   const handleDecrease = async (event) => {
     if (piece > 1) {
       setLoading(true);
       setPiece(piece - 1);
 
       setNewPrice(newPrice - item?.price);
+      // update item based on piece and newPrice
       item["newPrice"] = newPrice - item?.price;
       setNewAllItems(item);
       item["piece"] = (await piece) - 1;
@@ -55,7 +62,9 @@ const SpecificMenu = ({ item, handleAddToCart }) => {
           </div>
           <div className=" flex justify-between ">
             <div className="mr-2 pl-2 text-center lg:text-start md:text-start lg:p-0 md:p-0 mt-4">
-              <h1 className="text-2xl font-bold">{item?.name} <small className="text-sm">{item?.quantity}</small></h1>
+              <h1 className="text-2xl font-bold">
+                {item?.name} <small className="text-sm">{item?.quantity}</small>
+              </h1>
               <p className="py-1 text-xs">{item?.description}</p>
             </div>
             <div className="flex-col grid content-between">
@@ -69,7 +78,7 @@ const SpecificMenu = ({ item, handleAddToCart }) => {
               <div className="flex justify-center items-end  my-1 rounded-l-full">
                 <div className=" items-center justify-end mb-1 rounded  ml-6  bg-accent">
                   <h1
-                    onClick={ handleIncrease}
+                    onClick={handleIncrease}
                     className="btn btn-accent btn-sm text-white"
                   >
                     {" "}
@@ -86,6 +95,7 @@ const SpecificMenu = ({ item, handleAddToCart }) => {
                 </div>
               </div>
 
+              {/* button for adding cart and pass ordered items data as a props */}
               <button
                 onClick={() => handleAddToCart(newAllItems)}
                 className="btn btn-primary rounded-none "

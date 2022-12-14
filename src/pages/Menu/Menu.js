@@ -8,21 +8,37 @@ import BookingModal from "./BookingModal";
 
 const Menu = () => {
   const [loading, setLoading] = useState(false);
-  const [addingCart, setAddingCart] = useState([]);
-  const [allItems, setAllItems] = useState([]);
-  const [index, setIndex] = useState();
-  const [modalData, setModalData] = useState({});
+
+  // category-wise-route-state
   const [categoryRoute, setCategoryRoute] = useState(" ");
+
+  // category-wise-menu-item-state
+  const [allItems, setAllItems] = useState([]);
+
+  // users-adding-cart-state
+  const [addingCart, setAddingCart] = useState([]);
+
+  const [index, setIndex] = useState();
+
+  // modal-data-as-object-based-on-adding-cart-index-state
+  const [modalData, setModalData] = useState({});
+
+  // total-order-amount-state
   const [totalAmount, setTotalAmount] = useState();
+
+  // admin-order-checked-state
   const [adminChecked, setAdminChecked] = useState(false);
 
   if (!categoryRoute || !allItems) {
     setLoading(true);
   }
 
+  // load-menuItems-based-on-category
   useEffect(() => {
     setLoading(true);
-    fetch(`https://salsabil-cafe-server-production.up.railway.app/items/${categoryRoute}`)
+    fetch(
+      `https://salsabil-cafe-server-production.up.railway.app/items/${categoryRoute}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setAllItems(data);
@@ -30,6 +46,7 @@ const Menu = () => {
       });
   }, [categoryRoute]);
 
+  // get-category-from-button-and-SetCategoryRoute
   const handleItem = async (e) => {
     setLoading(true);
     e.preventDefault();
@@ -38,10 +55,12 @@ const Menu = () => {
     setLoading(false);
   };
 
+  // SetCartData-as-an-array-based-on-user-select-object
   const handleAddToCart = async (item) => {
     setLoading(true);
     const newCart = [...addingCart, item];
 
+    // filter-users-duplicate-selection
     if (addingCart.find((cart) => cart?.name === item?.name)) {
       return setLoading(false);
     } else {
@@ -50,16 +69,19 @@ const Menu = () => {
     }
   };
 
+  // modal-to-sure-cartOrder
   const handleModal = (number) => {
     setLoading(true);
+
+    // object-of-order-for-modal-data
     let obj = {};
     addingCart.forEach((elem, i) => {
-    obj[`order${i}`] = elem;
-    setIndex(i+1);
+      obj[`order${i}`] = elem;
+      setIndex(i + 1);
     });
     setModalData(obj);
-    setLoading(false)
-    setTotalAmount(number)
+    setLoading(false);
+    setTotalAmount(number);
   };
 
   if (loading) {
@@ -74,6 +96,8 @@ const Menu = () => {
         <h1 className=" font-serif lg:text-8xl text-4xl md:text-6xl text-neutral-content  tracking-wide py-28 p-10 text-white text-center ">
           MENU TABS
         </h1>
+
+        {/* display-cartData */}
         {addingCart && (
           <div className="relative">
             <Cart
@@ -90,6 +114,8 @@ const Menu = () => {
         <div className="card-body py-0 mb-20">
           <div>
             <div className="text-center lg:pt-8 pt-4">
+
+              {/* set-Category-button-field */}
               <div className="flex justify-center lg:py-14 py-6 items-center ">
                 <ul className="menu  grid lg:grid-cols-5 md:grid-cols-5 grid-cols-2 sm:grid-cols-4 gap-2 ">
                   <li className="btn-primary text-white">
@@ -139,6 +165,8 @@ const Menu = () => {
                   </li>
                 </ul>
               </div>
+
+              {/* display-all-MenuItemsHere */}
               <div className="">
                 <div className="w-10 rounded-lg m-2 h-1 mx-auto bg-secondary"></div>
                 <h4 className="text-lg tracking-wide font-bold pt-2">
@@ -159,16 +187,26 @@ const Menu = () => {
                       handleAddToCart={handleAddToCart}
                       allItems={allItems}
                       setAllItems={setAllItems}
-                      
                     ></SpecificMenu>
                   ))}
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
       </div>
-      <BookingModal modalData={modalData} totalAmount={totalAmount} addingCart={addingCart} setAddingCart={setAddingCart} adminChecked={adminChecked} index={index}></BookingModal>
+
+      {/* display-BookingModal */}
+      <BookingModal
+        modalData={modalData}
+        totalAmount={totalAmount}
+        addingCart={addingCart}
+        setAddingCart={setAddingCart}
+        adminChecked={adminChecked}
+        index={index}
+      ></BookingModal>
     </div>
   );
 };

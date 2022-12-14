@@ -31,7 +31,7 @@ const BookingModal = ({
     const isAdmin = adminChecked;
 
     
-
+// object for post order in backend 
     const order = {
       orderItems: addingCart,
       client: email,
@@ -46,6 +46,7 @@ const BookingModal = ({
       isAdmin: isAdmin
     };
 
+    // post backend ordered data
     fetch("https://salsabil-cafe-server-production.up.railway.app/order", {
       method: "POST",
       headers: {
@@ -63,22 +64,13 @@ const BookingModal = ({
         console.error("Error:", error);
       });
 
-    //  console.log(email, number, address, modalData);
+
     setAddingCart([]);
     e.target.reset();
     setLoading(false);
   };
 
-  // if (
-  //   loading ||
-  //   uLoading ||
-  //   !modalData ||
-  //   !index ||
-  //   !totalAmount ||
-  //   !addingCart
-  // ) {
-  //   return <Loading></Loading>;
-  // }
+
   return (
     <div>
       <input type="checkbox" id="bookingModal" className="modal-toggle" />

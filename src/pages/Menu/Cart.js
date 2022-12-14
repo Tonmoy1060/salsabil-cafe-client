@@ -11,13 +11,17 @@ import CartDetails from "./CartDetails";
 const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
   const [loading, setLoading] = useState(false);
   const [user, uLoading, error] = useAuthState(auth);
+
+  // cart-total-amount-show-state
   let [number, setNumber] = useState(0);
   const [admin, adminLoading] = useAdmin(user);
 
+  // total-amount-calculation
   addingCart.forEach((newCart) => {
     number += newCart?.newPrice;
   });
 
+  // remove-deselect-item-from-cart-and-update-cart
   const deleteFromCart = async (cart) => {
     setLoading(true);
     const updateCart = await addingCart.filter(
@@ -27,6 +31,7 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
     setLoading(false);
   };
 
+  // admin-order-toggler
   const handleToggler = (e) => {
     setAdminChecked(e.target.checked);
   };
@@ -37,17 +42,18 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
         <input type="checkbox" className="peer" />
         <div className="collapse-title py-0 pt-3 rounded-full bg-base-900 text-end p-0 text-secondary-content  peer-checked:text-secondary-content">
           <div className="indicator text-end lg:px-8 md:px-8 px-4 shadow-lg lg:py-6 md:py-6 py-3 bg-black bg-opacity-80 ">
+            {/* cart-items-total-number-badge */}
             <span className="indicator-item badge   badge-secondary text-white mt-4 mr-5">
               {addingCart?.length}
             </span>
-            {/* <span className=""> */}
+
             <BsFillBagCheckFill className="text-3xl  text-white   text-end"></BsFillBagCheckFill>
-            {/* </span> */}
           </div>
         </div>
         <div className="collapse-content shadow-2xl p-0 text-secondary-content  peer-checked:text-secondary-content ">
           <div className="card bg-base-300 rounded-sm">
             <div className="mb-3 ">
+              {/* display-cart-data */}
               <div className="card-body p-2">
                 {addingCart.map((cart) => (
                   <CartDetails
@@ -57,11 +63,14 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
                   ></CartDetails>
                 ))}
               </div>
+
+              {/* cart-data-bottom-section */}
               {number ? (
                 <div className="flex items-center justify-around">
                   <h1 className="badge  text-white">Total: {number}</h1>
-                  {user && admin &&
-                  (
+
+                  {/* toggler-badge-for-check-admin */}
+                  {user && admin && (
                     <div className="flex items-center">
                       <input
                         onClick={handleToggler}
@@ -73,9 +82,8 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
                       </h1>
                     </div>
                   )}
-
+                  {/* open-modal-and-pass-total-amount-as-props-named-number */}
                   {user ? (
-                    // <button className="btn btn-accent btn-xs text-white">
                     <label
                       onClick={() => handleModal(number)}
                       htmlFor="bookingModal"
@@ -84,7 +92,6 @@ const Cart = ({ addingCart, setAddingCart, handleModal, setAdminChecked }) => {
                       Place Order
                     </label>
                   ) : (
-                    // </button>
                     <Link
                       to={"/login"}
                       className="btn btn-accent btn-xs text-white"
