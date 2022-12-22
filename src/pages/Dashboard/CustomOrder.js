@@ -11,7 +11,7 @@ const CustomOrder = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("https://salsabil-cafe-server-production.up.railway.app/order/true", {
+    fetch("https://salsabil-cafe.onrender.com/order/true", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

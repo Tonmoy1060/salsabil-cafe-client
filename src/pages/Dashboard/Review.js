@@ -41,7 +41,7 @@ const Review = () => {
             comment,
           };
 
-          fetch("https://salsabil-cafe-server-production.up.railway.app/review", {
+          fetch("https://salsabil-cafe.onrender.com/review", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

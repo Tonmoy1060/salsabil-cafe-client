@@ -43,13 +43,16 @@ const AddService = () => {
             description,
           };
 
-          fetch("https://salsabil-cafe-server-production.up.railway.app/items", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(item),
-          })
+          fetch(
+            "https://salsabil-cafe.onrender.com/items",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(item),
+            }
+          )
             .then((response) => response.json())
             .then((data) => {
               toast.success(`Successfully added ${title} service`);
@@ -117,13 +120,13 @@ const AddService = () => {
                 />
               </div>
               <div className="form-control max-w-xs my-3">
-              <textarea
-                name="description"
-                className="textarea textarea-bordered bg-base-200 h-24"
-                placeholder="description"
-                required
-              ></textarea>
-            </div>
+                <textarea
+                  name="description"
+                  className="textarea textarea-bordered bg-base-200 h-24"
+                  placeholder="description"
+                  required
+                ></textarea>
+              </div>
 
               <button className=" my-3 btn btn-primary text-white w-full max-w-xs">
                 Add Item

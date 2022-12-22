@@ -11,7 +11,7 @@ const FullOrderList = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("https://salsabil-cafe-server-production.up.railway.app/orders", {
+    fetch("https://salsabil-cafe.onrender.com/orders", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -23,7 +23,7 @@ const FullOrderList = () => {
     setLoading(true);
 
     fetch(
-      `https://salsabil-cafe-server-production.up.railway.app/delevered/${e}`,
+      `https://salsabil-cafe.onrender.com/delevered/${e}`,
       {
         method: "PUT", // or 'PUT'
         headers: {

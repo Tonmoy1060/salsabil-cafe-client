@@ -47,7 +47,7 @@ const BookingModal = ({
     };
 
     // post backend ordered data
-    fetch("https://salsabil-cafe-server-production.up.railway.app/order", {
+    fetch("https://salsabil-cafe.onrender.com/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

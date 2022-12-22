@@ -6,7 +6,7 @@ const useAdmin = (user) => {
   const [adminLoading, setAdminLoading] = useState(true);
   useEffect(() => {
     if (email) {
-      fetch(`https://salsabil-cafe-server-production.up.railway.app/admin/${email}`, {
+      fetch(`https://salsabil-cafe.onrender.com/admin/${email}`, {
         method: "GET",
         headers: {
           authorization: `bearer ${localStorage.getItem("accessToken")}`,

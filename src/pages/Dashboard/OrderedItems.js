@@ -11,7 +11,7 @@ const OrderedItems = () => {
   const [bookings, setBookings] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://salsabil-cafe-server-production.up.railway.app/orders/${user?.email}`, {
+    fetch(`https://salsabil-cafe.onrender.com/orders/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

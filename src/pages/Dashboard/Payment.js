@@ -21,7 +21,7 @@ const Payment = () => {
     isLoading,
     refetch,
   } = useQuery("bookingId", () =>
-    fetch(`https://salsabil-cafe-server-production.up.railway.app/bookingId/${params.id}`, {
+    fetch(`https://salsabil-cafe.onrender.com/bookingId/${params.id}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

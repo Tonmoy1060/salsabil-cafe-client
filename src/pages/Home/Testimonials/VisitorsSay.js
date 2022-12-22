@@ -4,7 +4,7 @@ import PeopleReviews from "./PeopleReviews";
 const VisitorsSay = () => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    fetch("https://salsabil-cafe-server-production.up.railway.app/review")
+    fetch("https://salsabil-cafe.onrender.com/review")
       .then((res) => res.json())
       .then((data) => setComments(data));
   }, []);

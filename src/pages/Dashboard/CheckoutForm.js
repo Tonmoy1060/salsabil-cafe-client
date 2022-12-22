@@ -12,7 +12,7 @@ const CheckoutForm = ({ exactBooking }) => {
   const [user, loading, error] = useAuthState(auth);
 
   useEffect(() => {
-    fetch("https://salsabil-cafe-server-production.up.railway.app/payment", {
+    fetch("https://salsabil-cafe.onrender.com/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const CheckoutForm = ({ exactBooking }) => {
          transactionId : paymentIntent.id,
          order: orderItems
       }
-      fetch(`https://salsabil-cafe-server-production.up.railway.app/booking/${_id}`, {
+      fetch(`https://salsabil-cafe.onrender.com/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

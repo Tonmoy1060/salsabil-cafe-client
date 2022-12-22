@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const updateEmail = { email: email };
-    fetch(`https://salsabil-cafe-server-production.up.railway.app/user/admin/${email}`, {
+    fetch(`https://salsabil-cafe.onrender.com/user/admin/${email}`, {
       method: "PUT", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

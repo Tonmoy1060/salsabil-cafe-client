@@ -7,7 +7,7 @@ const useToken = (user) => {
     const email = user?.user?.email;
     const currentUser = { email: email };
     if (email) {
-      fetch(`https://salsabil-cafe-server-production.up.railway.app/user/${email}`, {
+      fetch(`https://salsabil-cafe.onrender.com/user/${email}`, {
         method: "PUT", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
